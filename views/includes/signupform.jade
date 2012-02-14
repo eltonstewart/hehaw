@@ -1,0 +1,106 @@
+.well
+  .form-vertical
+    h3 Sign up 
+    h4 Take a moment to complete this form
+    table
+      tr
+        td(colspan="2", valign="top")
+          label Username
+          input(type="text", class="span3", placeholder="enter a username")
+      tr
+        td(valign="top")
+          .control-group
+            label Password
+            input(id="password", type="text", class="span3", placeholder="enter a password") 
+            .help-inline(style="display:none") Please enter a password
+        td(valign="top")  
+          label Confirm Password
+          input(type="text", class="span3", placeholder="confirm your password")
+      tr
+        td(colspan="2", valign="top")
+          .line-light-grey
+          h3 Recall your Password
+          label Password Hint
+          select(name="select")
+            option(value="0") Select one
+            option(value="1") What is your pets name?
+            option(value="2") What is your favorite past-time?
+            option(value="3") What street did you grow up on?
+            option(value="4") What is your mothers maiden name?                 
+          label Your Answer
+          input(type="text", class="span3", placeholder="enter your answer")  
+      tr
+        td(colspan="2", valign="top")
+          .line-light-grey
+          h3 Personal Information
+          label Salutation
+          select(name="salutation")
+            option(value="0") Select one
+            option(value="1") Mr.
+            option(value="2") Ms.
+            option(value="3") Mrs.
+            option(value="4") Dr
+      tr
+        td(width="230")
+          label First name
+              input(type="text", class="span3", placeholder="first name")      
+        td(valign="top")
+          label Last name
+            input(type="text", class="span3", placeholder="last name")         
+      tr
+        td(colspan="2", valign="top")
+          label Company
+          input(type="text", class="span3", placeholder="company")
+      tr
+        td(valign="top")
+          label Address 1
+          input(type="text", class="span3", placeholder="address 1")
+        td(valign="top")
+          label Address 2
+          input(type="text", class="span3", placeholder="address 2")
+      tr
+        td(valign="top")
+          label City
+          input(type="text", class="span3", placeholder="city")
+        td(valign="top")      
+          label State
+          input(type="text", class="span3", placeholder="state")
+      tr
+        td(valign="top")
+          label Zipcode/Postcode
+          input(type="text", class="span3", placeholder="zipcode/postcode")
+        td(valign="top")  
+          include countrylist                                   
+      tr
+        td(valign="top")
+          label Home Phone
+          input(type="text", class="span3", placeholder="home phone")    
+        td(valign="top")
+          label Work Phone (optional)
+          input(type="text", class="span3", placeholder="work phone")
+      tr
+        td(colspan="2", valign="top")
+          label Cell/Mobile Phone (optional)
+          input(type="text", class="span3", placeholder="cell/mobile phone")
+      tr  
+        td(colspan="2", valign="top")
+          label Email Address
+          input(type="text", class="span3", placeholder="email")
+          .help-inline
+            label.checkbox
+              input(type="checkbox")
+              | Check this if you do not have email
+      tr
+        td(colspan="2", valign="top")
+          label.checkbox
+            input(type="checkbox", name="optionsCheckboxList1", id="optionsCheckbox", value="option1")
+            | Send me exclusive e-mail offers & discounts  
+    .line-light-grey
+    button(id="submit-signup", type="submit", class="btn btn-large") Sign up
+script
+ // error demo
+  $("#submit-signup").click(function(){
+    $(".control-group").addClass("error");
+    $(".help-inline").fadeIn();    
+    $("#password").focus();
+  })

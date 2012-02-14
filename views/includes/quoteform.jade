@@ -1,0 +1,28 @@
+.quote-form
+  .well
+    h3 Select a Product Category
+    select(id="Category", data-placeholder="Choose a Category...", class="chzn-select", style="width:200px;", tabindex="1") 
+    .help
+      | Get a quote by selecting a category then entering the purchase price of your item.
+    .quote-info
+      #dvPrice(style='display: none;')
+        .input-prepend
+          span.add-on $
+          input#txtPrice(size="11", type="text", placeholder="enter the value of your item")
+      label#dvACC.checkbox(style='display: none;')
+        input#ckbACC(type="checkbox", name="optionsCheckboxList1", value="option1")
+        | Accidental Damage
+      label#dvCOM.checkbox(style='display: none;')
+        input#ckbCOM(type="checkbox", name="optionsCheckboxList1", value="option1")
+        | Commercial Usage
+      label#dvINHOME.checkbox(style='display: none;')
+        input#ckbINHOME(type="checkbox", name="optionsCheckboxList1", value="option1")
+        | Onsite Repairs
+      #dvErrMsg(style="display: none") Sorry we didn't find any warranty products with your current selection, try changing the price or the type of cover.
+      #dvStartMsg(style="display: none") Enter the price of your product to get a quote.
+      table#MyTable.MyTable.table(style='display: none;')
+        tr
+          td
+      #dvDescription(style="display: none")
+                                                
+   
