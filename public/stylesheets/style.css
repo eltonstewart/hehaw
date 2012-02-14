@@ -263,7 +263,6 @@ body {
   opacity: 1;
   cursor: pointer; }
 
-/* IMPRESS NOT SUPPORTED STYLES */
 .fallback-message {
   font-family: sans-serif;
   line-height: 1.3;
